@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ '/_includes/constants/base.css' | url }}">
+  <link rel="stylesheet" href="{{ style1 | url }}">
+  <link rel="stylesheet" href="{{ style2 | url }}">
+  <link rel="stylesheet" href="{{ style3 | url }}">
+  <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+      <div class="title">
+        <a href="{{ '/' | url }}">LEGEND OF AHYA</a>
+      </div>
+      <div class="header-scroll-container">
+        <div class="header-scroll">
+          <img src="{{ '/_includes/assets/images/header-scroll/01.png' | url }}" alt="Header Image 1">
+          <img src="{{ '/_includes/assets/images/header-scroll/02.png' | url }}" alt="Header Image 2">
+          <img src="{{ '/_includes/assets/images/header-scroll/03.png' | url }}" alt="Header Image 3">
+          <img src="{{ '/_includes/assets/images/header-scroll/04.png' | url }}" alt="Header Image 4">
+          <img src="{{ '/_includes/assets/images/header-scroll/05.png' | url }}" alt="Header Image 5">
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="{{ '/' | url }}">HOME</a></li>
+          <li><a href="{{ '/character-profiles/' | url }}">CHARACTER PROFILES</a></li>
+          <li><a href="{{ '/locations/' | url }}">LOCATIONS</a></li>
+          <li><a href="{{ '/art/' | url }}">ART</a></li>
+          <li><a href="{{ '/shop/' | url }}">WHERE TO BUY BOOKS</a></li>
+          <li><a href="{{ '/blog/' | url }}">BLOG</a></li>
+        </ul>
+        <button id="toggleMode">☼</button>
+      </nav>
+    </header>
+    <div class="page-transition">
+    <div class="content">
+      {{ content | safe }}
+    </div>
+    <footer>
+      <p class="footer" style="text-align: center;">&copy; 2024 Legend of Ahya. All rights reserved.</p>
+    </footer>
+    <script src="{{ '/_includes/constants/base.script.js' | url }}"></script>
+    <script src="{{ script1 | url }}"></script>
+  </div>
+</body>
+</html>

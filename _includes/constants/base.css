@@ -1,0 +1,238 @@
+/* Color Variables */
+:root {
+  /* Dark mode colors */
+  --dm-main: #181921;
+  --dm-secondary: #B3594F;
+  --dm-secondary-br: #d0928b;
+  --dm-accent1: #229FAF;
+  --dm-accent2: #498482;
+  --dm-text: #E7E1E1;
+
+  /* Light mode colors */
+  --lm-main: #E7E1E1;
+  --lm-secondary: #216C75;
+  --lm-secondary-br: #6ca8af;
+  --lm-accent1: #A43027;
+  --lm-accent2: #9D7274;
+  --lm-text: #181921;
+}
+
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  overflow-x: hidden;
+}
+
+.page-transition.show {
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Mode Styles */
+
+
+.dark-mode {
+  transition: background-color 0.4s ease, color 0.4s ease;
+  background-color: var(--dm-main);
+  color: var(--dm-text);
+}
+
+.light-mode {
+  transition: background-color 0.4s ease, color 0.4s ease;
+  background-color: var(--lm-main);
+  color: var(--lm-text);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Scroll Bar Styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+.dark-mode::-webkit-scrollbar-track {
+  background-color: var(--dm-accent2);
+}
+
+.light-mode::-webkit-scrollbar-track {
+  background-color: var(--lm-accent2);
+}
+
+.dark-mode::-webkit-scrollbar-thumb {
+  background-color: var(--dm-accent1);
+}
+
+.light-mode::-webkit-scrollbar-thumb {
+  background-color: var(--lm-accent1);
+}
+
+/* Header Styles */
+header {
+  width: 100vw;
+  top: 0in;
+  position: fixed;
+  transition: height 0.3s ease-out;
+  z-index: 5;
+}
+
+.header-scroll-container {
+  position: relative;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+}
+
+.header-scroll {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease, height 0.3s ease-out;
+}
+
+.header-scroll img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  z-index: 6;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: height 0.3s ease-out;
+}
+
+.title img {
+  display: inline-block;
+  height: 1in;
+
+}
+
+/* Navigation Styles */
+
+nav {
+  z-index: 5;
+  height: 0.8in;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+nav ul {
+  z-index: 5;
+  align-items: center;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  z-index: 5;
+  margin: 0.1in 0.5in;
+}
+
+nav a {
+  z-index: 5;
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+  transition: color 0.3s ease-out;
+}
+
+.light-mode nav {
+  z-index: 5;
+  transition: background-color 0.4s ease;
+  background-color: var(--lm-main);
+}
+
+.dark-mode nav {
+  z-index: 5;
+  transition: background-color 0.4s ease;
+  background-color: var(--dm-main);
+}
+
+.dark-mode nav a {
+  z-index: 5;
+  color: var(--dm-secondary);
+}
+
+.light-mode nav a {
+  z-index: 5;
+  color: var(--lm-secondary);
+}
+
+.dark-mode nav a:hover {
+  z-index: 5;
+  color: var(--dm-secondary-br);
+}
+
+.light-mode nav a:hover {
+  z-index: 5;
+  color: var(--lm-secondary-br);
+}
+
+#toggleMode {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0;
+  line-height: 1;
+  position: relative;
+  top: 0.4in;
+  right: -1in;
+  transform: translateY(-50%);
+}
+
+.dark-mode #toggleMode {
+  color: var(--lm-secondary);
+}
+
+.light-mode #toggleMode {
+  color: var(--dm-secondary);
+}
+
+/* Main Content Styles */
+.content {
+  transition: background-color 0.4s ease;
+  padding-top: 5in;
+  transition: padding-top 0.3s ease;
+}
+
+.dark-mode h1 {
+  transition: background-color 0.4s ease;
+  background-color: var(--dm-main);
+}
+
+.light-mode h1 {
+  transition: background-color 0.4s ease;
+  background-color: var(--lm-main);
+}
+
+/* Footer */
+
+.footer {
+  padding: 0.2in 0in;
+  margin-bottom: 0in;
+}
+
+.dark-mode .footer {
+  transition: background-color 0.4s ease, color 0.4s ease;
+  color: var(--dm-text);
+  background-color: #404044;
+}
+
+.light-mode .footer {
+  transition: background-color 0.4s ease, color 0.4s ease;
+  color: var(--lm-text);
+  background-color: #b4b6c1;
+}

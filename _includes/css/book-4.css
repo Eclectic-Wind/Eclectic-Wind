@@ -1,0 +1,12 @@
+.dark-mode .glow4 {
+    border: 2px solid #fff;
+    border-radius: 1px;
+    box-shadow: 0 0 10px #229FAF;
+    }
+  
+  .light-mode .glow4 {
+    border: 2px solid #fff;
+    border-radius: 1px;
+    box-shadow: 0 0 10px #A43027;
+    }
+  
